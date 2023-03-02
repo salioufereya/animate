@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container {
+   
+  
+    width: 20rem;
+    height: 5rem;
+    border: 2px solid rgb(237, 230, 230);
+    color: rgb(239, 232, 232);
+    background-color: rgb(3, 3, 4);
+    font-size: xx-large;
+    position: relative;
+     overflow: hidden; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* .container::before {
+    background: aliceblue;
+   content: " Hoverable";
+   color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+}   */
+
+.container::before {
+    background: aliceblue;
+   content: "Hoverable";
+   color: rgb(250, 244, 244);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    position: absolute;
+    transition: all 1s ease;
+    width: 0;
+    height: 100%;
+    top: 50;
+    bottom: 0;
+    transition: 0.3s all;
+} 
+
+
+/* .container::after {
+    background: aliceblue;
+   content: "Hoverable";
+   color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+}  */
+
+
+
+/* .container::after {
+    background: aliceblue;
+   content: "Hoverable";
+   color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    transition: 0.3s all;
+}  */
+/* .container:hover::after{
+    scale: 1;
+} */
+
+.container:hover::before{
+   transform: scale(4); 
+   opacity: 0;
+}
+
+/* .container:hover::after{
+    transform: scale(1.5); 
+ }
+  */
+
+
+/* .container::after {
+   content: "Hoverable";
+    position: absolute;
+    content: " Hoverable";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+   
+    left: 0;
+    top: 0;
+
+} */
+
+/* .container:hover::before {
+   left: 0;
+   top: 0;
+}
+
+.container:hover::after {
+    left: 100%;
+    top: -100%;
+ } */
+
+
+ /* .container:hover{
+       scale:1.5;
+ } */

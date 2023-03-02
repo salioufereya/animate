@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.pharmacie{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.pharmacie::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgb(100, 182, 100);
+    transition: 0.3s;
+}
+.pharmacie:hover::before{
+    height: 50%;
+}
+.pharmacie::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    right: 50%;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(50%);
+    background-color: rgb(100, 182, 100);
+    transition: 0.3s;
+}
+.pharmacie:hover::after{
+    width: 100%;
+    
+}

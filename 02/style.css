@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(246, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    width: 15%;
+    height: 15%;
+
+
+}
+
+.div1 {
+    width: 20rem;
+    height: 5rem;
+
+    border: 2px solid rgb(137, 134, 134);
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.div1::before {
+    background: red;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s ease;
+    width: 50%;
+    height: 100%;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    z-index: -1;
+}
+
+
+
+.div1::after {
+    background: red;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: all 2s ease;
+    width: 50%;
+    height: 100%;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    z-index: -1;
+
+}
+
+.div1:hover::before,
+.div1:hover::after {
+    transform: rotate(0);
+
+}
+
+.div1:hover {
+    color: aliceblue;
+    transition-delay: 1s;
+}
+
+/* 
+.div1 p {
+    position: relative;
+  color: aliceblue;
+    z-index: 3;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .div2{
+    width: 15rem;
+    height: 15rem;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    z-index: none;
+}
+.text{
+    color: aliceblue;
+    position: absolute;
+    left: 22%;
+    top: 61%;
+    z-index: 2;
+} */
+
+/* .div1::after{
+    content: "";
+    border: 1rem solid beige;
+   
+} */
+/* @keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+} */
+
+/* .div2::before{
+    content: '';
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border: 2px solid aliceblue;
+    box-shadow: 0 0 20px rgb(8,8, 8);
+    animation: animate 4s linear infinite;
+}
+.div2:hover::before{
+    content: '';
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border: 2px solid aliceblue;
+    box-shadow: 0 0 20px rgb(8,8, 8);
+    animation: animate 4s linear infinite;
+} */
+
+/* ANimation1*/
+/* .div1::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+
+.container:hover .div1::before{
+    animation: animate 1s linear forwards;
+}
+@keyframes animate{
+    0%{
+        width: 50%;
+        height: 0;
+        border-top-color:#fff ;
+        border-right-color:transparent ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    } 
+    50%{
+        width: 100%;
+        height: 0;
+        border-top-color:#fff ;
+        border-right-color:#fff ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    }
+   
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color:#fff ;
+        border-right-color:#fff ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    } 
+}
+
+
+.div1::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+.container:hover .div1::after{
+    animation: animate2 1s linear forwards;
+}
+@keyframes animate2{
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color:transparent ;
+        border-right-color:transparent ;
+        border-bottom-color:transparent ;
+        border-left-color:#fff ;
+    } 
+    50%{
+        width: 0;
+        height: 100%;
+        border-top-color:transparent ;
+        border-right-color:transparent;
+        border-bottom-color:#fff ;
+        border-left-color:#fff ;
+    }
+   
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color:transparent ;
+        border-right-color:transparent ;
+        border-bottom-color:#fff ;
+        border-left-color:#fff ;
+    } 
+} */
+
+
+/*ANIMATION2*/
+
+/* 
+.div2::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+.container:hover .div2::before{
+    animation: animate 1s linear forwards;
+}
+@keyframes animate{
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color:#fff ;
+        border-right-color:transparent ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    } 
+    50%{
+        width: 100%;
+        height: 0;
+        border-top-color:#fff ;
+        border-right-color:#fff ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    }
+   
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color:#fff ;
+        border-right-color:#fff ;
+        border-bottom-color:transparent ;
+        border-left-color:transparent ;
+    } 
+}
+
+
+.div2::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+.container:hover .div2::after{
+    animation: animate2 1s linear forwards;
+}
+@keyframes animate2{
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color:transparent ;
+        border-right-color:transparent ;
+        border-bottom-color:transparent ;
+        border-left-color:#fff ;
+    } 
+    50%{
+        width: 0;
+        height: 100%;
+        border-top-color:transparent ;
+        border-right-color:transparent;
+        border-bottom-color:#fff ;
+        border-left-color:#fff ;
+    }
+   
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color:transparent ;
+        border-right-color:transparent ;
+        border-bottom-color:#fff ;
+        border-left-color:#fff ;
+    } 
+} */
