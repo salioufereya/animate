@@ -1,0 +1,114 @@
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container {
+   
+  
+    width: 20rem;
+    height: 5rem;
+    z-index: 1;
+    color: rgb(249, 247, 247);
+    font-size: xx-large;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+     
+}
+
+.container:hover {
+   
+  
+    width: 20rem;
+    height: 5rem;
+  background-color: white;
+    z-index: 2;
+    color: rgb(249, 247, 247);
+    font-size: xx-large;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: yellow;
+     
+}
+
+ .container::before {
+   content: "";
+   display: flex;
+    position: absolute;
+    background-color: green;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+    left: -5%;
+    top: -5%;
+    /* transform: perspective(200px)rotateX(50deg); */
+   
+
+}
+
+
+.container::after {
+    z-index: -1;
+   content: "Hoverable";
+   background-color: red;
+    position: absolute;
+    content: " ";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+} 
+
+.container:hover::before{
+    
+        content: "";
+        display: flex;
+         position: absolute;
+         background-color: green;
+         transition: all 0.5s ease;
+         width: 100%;
+         height: 100%;
+         left: -5%;
+         top: -25%;
+         transform: perspective(700px)rotateX(85deg); 
+}
+
+
+.container:hover::after{
+    
+    content: "";
+        display: flex;
+         position: absolute;
+        background-color: red;
+         transition: all 0.5s ease;
+         width: 100%;
+         height: 100%;
+         left: -5%;
+         top: 40%;
+         transform: perspective(700px)rotateX(-80deg); 
+} 
